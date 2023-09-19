@@ -1,0 +1,20 @@
+
+<div class="panel panel-default" >
+    <div class="panel-heading"> Hi! How are You today?? Number of clicks:{{numberOfClicks}}
+        <div class="panel-body">
+            <button class="btn btn-success" (click)="onHavingGoodHumor()">good</button> 
+            <button class="btn btn-primary" (click)="onHavingNormalHumor()">normal</button>
+            <button class="btn btn-danger"(click)="onHavingBadHumor()">bad</button>
+            <hr>
+            <label *ngIf="isHumorStatusChosen()">Are you sure?</label>
+            <button class="button btn-warning" *ngIf="isHumorStatusChosen()" (click)="onChoosingYes()">YES</button>
+            <button class="button btn-basic" *ngIf="isHumorStatusChosen()" (click)="onChoosingNO()">NO</button>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div *ngFor="let r of responses">{{r}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+

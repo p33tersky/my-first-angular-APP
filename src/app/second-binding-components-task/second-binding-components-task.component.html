@@ -1,0 +1,39 @@
+<div class="containetr">
+    <div class="row">
+        <div class="col-xs-10">
+            <div class="panel panel-default" style="width: 50%;">
+                <div  class="panel-heading" width="100px"> 
+                    <h4>Hi! What is Your name? </h4>
+                    <div>
+                        <input type="text" class="form-control"  [(ngModel)]="yourName" style="width: 90%;">
+                    </div>
+                    
+                    <div class="panel-heading">
+                        <form>
+                            <h4>In which color do You want to write your name?</h4>
+                            <mat-form-field>
+                              <select matNativeControl [(ngModel)]="selectedColor" name="color">
+                                <option value="" selected></option>
+                                <option *ngFor="let color of colors" [color]="color.value">
+                                    {{color.viewValue}}
+                                </option>
+                              </select>
+                            </mat-form-field>
+                            <p> Selected color: {{selectedColor}} </p>
+                        </form>
+                    </div> 
+                </div>
+                <h4 class="panel-body">
+                    preview:
+                    <h2 [style.color]="selectedColor"> {{yourName}}</h2>
+                <button class="btn btn-warning" (click)="onSubmitItalic(yourName,selectedColor )">Submit Italic</button>
+                <button class="btn btn-warning" (click)="onSubmitBold(yourName,selectedColor)">Submit Bold</button>
+
+
+                 </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

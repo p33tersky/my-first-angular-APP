@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+    <div class="panel-heading"  [ngStyle]="{color: element.color}" >Hi {{element.name}} ! </div>
+    <div class="panel-body">
+        <h2>
+            <p *ngIf="element.font === 'italic' " style="font-style: italic;">{{element.message}}</p>
+            <strong *ngIf="element.font === 'bold' " style="font-style: bold">{{element.message}}</strong>
+        </h2>
+    </div>
+</div>

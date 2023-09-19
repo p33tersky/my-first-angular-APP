@@ -1,0 +1,22 @@
+.my-button {
+    background-image: url('src\assets\myPhotoXD.jpg');
+    background-size: cover; 
+    width: 180px; 
+    height: 240px;
+    border: none; 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 10px 0 rgb(255, 255, 255);
+}
+
+.my-button:hover {
+  transform: scale(0.8); 
+  box-shadow: 5px 5px 10px 0 rgba(20, 83, 255, 0.618);
+}
+
+.my-button:active {
+    background-image: url('src\assets\lokiec.JPG') ;
+    width: 400px;
+    height: 220px;
+    box-shadow: 5px 5px 10px 0 rgba(230, 1, 255, 0.411);
+  }

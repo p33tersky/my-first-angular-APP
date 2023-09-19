@@ -18,6 +18,9 @@ export class ServersComponent {
   serverName = ''
   username=''
   usernameStatus
+  serverCreated = false;
+  servers = ['Testserver', 'testserver2']
+
 
   constructor() {
     setTimeout(() =>{
@@ -28,6 +31,8 @@ export class ServersComponent {
 
   onCreateServer(){
     this.serverCreationStatus = "Server was created! Name is " + this.serverName;
+    this.servers.push(this.serverName);
+    this.serverCreated = true;
   }
 
 
