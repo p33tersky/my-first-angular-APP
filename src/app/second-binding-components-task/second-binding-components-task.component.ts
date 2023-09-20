@@ -31,12 +31,12 @@ export class SecondBindingComponentsTaskComponent {
 
   onSubmitItalic(givenName, givenColor){
     this.onSubmitName(givenName, givenColor),
-    this.italicSubmitted.emit({name: this.yourName, message: "You choose italic font, nice", color: this.chosenColor});
+    this.italicSubmitted.emit({name: this.yourName, message: "You chose italic font", color: this.chosenColor});
     
   }
   onSubmitBold(givenName, givenColor){
     this.onSubmitName(givenName, givenColor),
-    this.boldSubmitted.emit({name: this.yourName, message: "Oh, bold font, I do not like it",color:this.chosenColor});
+    this.boldSubmitted.emit({name: this.yourName, message: "You chose bold font",color:this.chosenColor});
   }
   selectedColor;
   

@@ -1,9 +1,12 @@
 <div class="panel panel-default">
-    <div class="panel-heading"  [ngStyle]="{color: element.color}" >Hi {{element.name}} ! </div>
+    <h3 class="panel-heading"  [ngStyle]="{color: element.color}" style="font-size: large;">Hello {{element.name}}! </h3>
     <div class="panel-body">
         <h2>
             <p *ngIf="element.font === 'italic' " style="font-style: italic;">{{element.message}}</p>
             <strong *ngIf="element.font === 'bold' " style="font-style: bold">{{element.message}}</strong>
         </h2>
+
+        <app-binding-components-task *ngFor="let bElement of bindingElements" 
+        [bindingElement]="bElement"></app-binding-components-task>
     </div>
 </div>

@@ -9,4 +9,7 @@ import { Component, Input } from '@angular/core';
 export class PanelComponent {
    @Input() element: {name: string, font: string, message: string, color: string}
 
+  bindingElements = [{humorStatus: null}];
+
+
 }
