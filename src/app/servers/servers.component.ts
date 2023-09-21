@@ -16,40 +16,42 @@ export class ServersComponent {
   allowNewServer = false;
   serverCreationStatus = 'No server was created'
   serverName = ''
-  username=''
+  username = ''
   usernameStatus
   serverCreated = false;
   servers = ['Testserver', 'testserver2']
 
 
   constructor() {
-    setTimeout(() =>{
+    setTimeout(() => {
       this.allowNewServer = true;
-    },3000)
+    }, 3000)
 
   }
 
-  onCreateServer(){
+  onCreateServer() {
     this.serverCreationStatus = "Server was created! Name is " + this.serverName;
     this.servers.push(this.serverName);
     this.serverCreated = true;
   }
 
 
-  isAllowedToProvideUsername(username:string){
-    if(!(username.trim()==="")){
-      this.usernameStatus = "Username " + username + " is valid " 
+  isAllowedToProvideUsername(username: string) {
+    if (!(username.trim() === "")) {
+      this.usernameStatus = "Username " + username + " is valid "
       return true;
-    }else {
-      this.usernameStatus = "Username is not valid " 
+    } else {
+      this.usernameStatus = "Username is not valid "
       return false;
-    
+
     }
   }
 
-  onReset(){
+  onReset() {
     this.username = '';
   }
+
+
 
 
 

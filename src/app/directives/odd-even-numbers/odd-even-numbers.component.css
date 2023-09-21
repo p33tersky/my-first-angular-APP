@@ -1,0 +1,11 @@
+.odd {
+    color: red;
+}
+
+.even {
+    color: blue;
+}
+
+button {
+    margin-right: 10px;
+}

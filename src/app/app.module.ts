@@ -16,12 +16,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { OddEvenNumbersComponent } from './directives/odd-even-numbers/odd-even-numbers.component';
+import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
     ServerComponent,
     ServersComponent,
     SuccessAlertComponent,
@@ -29,16 +35,19 @@ import { MatInputModule } from '@angular/material/input';
     ButtonTaskComponent,
     BindingComponentsTaskComponent,
     SecondBindingComponentsTaskComponent,
-    PanelComponent
+    PanelComponent,
+    OddEvenNumbersComponent,
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    FormsModule, 
+    FormsModule,
     MatFormFieldModule,
-     MatSelectModule,
-      MatInputModule
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
